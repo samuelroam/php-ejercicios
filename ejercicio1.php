@@ -6,16 +6,17 @@
 <body>
 <?php
 
-for($i=0;$i<5;$i++){
+// Se rellena el array de los pisos
+for($i=1;$i<6;$i++){
 $pisos[]=$i;
 };
-for($i=0;$i<4;$i++){
+// Se rellena el array de las puertas
+for($i=1;$i<5;$i++){
 $puertas[]=$i;
 };
 
+// Dentro del bucle de los pisos se ejecuta el bucle de las puertas, y se muestra así por pantalla
 foreach($pisos as $altura){
-
-
 foreach($puertas as $lados){
 	echo("piso ");
 	echo($altura);
