@@ -13,15 +13,18 @@ for($i=0;$i<4;$i++){
 $puertas[]=$i;
 };
 
+foreach($pisos as $altura){
+
 
 foreach($puertas as $lados){
-	foreach($pisos as $altura){
-	echo("piso");
+	echo("piso ");
 	echo($altura);
+echo(" ---> ");
+	echo("puerta ");
+	echo($lados);
 	echo("<br>");
 	};
-echo($lados);
-echo("puerta");
+echo("<br>");
 };
 
 ?>
