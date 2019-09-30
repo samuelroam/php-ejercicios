@@ -5,24 +5,26 @@
 </head>
 <body>
     <?php
-    /*en proceso*/
-    for ($i=0;$i<=10;$i++){
-        $numeros = array_fill(0,11,$i);
-        for($j=$i;$j<0;$j--){
-            if($i==0){
-                $fact=0;
-            }else{
+    
+    $naturales = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+	$factoriales = [];
+	$naturalFactorizado = 0;
 
-            
-            $fact=$fact*j;
-        }
+    for ($i=0; $i < count($naturales); $i++) { 
+		array_push($factoriales, Factorial($naturales[$i]));
     }
-        
+    foreach($factoriales as $valor){
+        echo $valor."<br>";
     }
-    $factorial = array_fill(0,11,$fact);
-    foreach($numeros as $valor){
-    echo $valor;
-    }
+
+    function Factorial($num){ 
+    $factorial = 1; 
+    for ($i = 1; $i <= $num; $i++){ 
+      $factorial = $factorial * $i; 
+    } 
+    return $factorial; 
+	} 
+	   
 
     ?>
 </body>
