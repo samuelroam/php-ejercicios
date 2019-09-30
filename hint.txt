@@ -1,0 +1,3 @@
+str_replace(array('á','é','í','ó','ú'),array('a','e','i','o','u'),$cadena);
+
+cal_days_in_month(cal_gregorian,1,2030);
