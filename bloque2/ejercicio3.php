@@ -5,19 +5,21 @@
 </head>
 <body>
     <?php
+    $numeros = [];
     for($i=0;$i<=20;$i++){
-        $aleatorio=
+        array_push($numeros,rand(1,50));
     }
-    $numeros=array_fill(0,20,rand());
     
-    for($contador=0;$contador<=count($numeros);$contador++){
-        echo $numeros;
-        echo $contador;
-    }
-    foreach($numeros as $contador){
-        echo $contador;
+        echo "valor maximo del array: ".max($numeros);
         echo "<br>";
-    }
+        echo "Valor minimo del array: ".min($numeros);
+        echo "<br>";
+        echo "suma de los elementos del array: ".array_sum($numeros);
+        echo "<br>";
+        $promedio = array_sum($numeros)/count($numeros);
+        echo "promedio de los elementos del array: ".$promedio;
+        echo "<br>";
+    
     ?>
 </body>
 </html>
