@@ -5,15 +5,18 @@
 </head>
 <body>
     <?php
-    $name=[$_POST["nombre"]];
-    $_SESSION["nombre"] = $name;
-    //strtolower($_POST["nombre"]);   
-    $_SESSION["correo"] = strtolower($_POST["correo"]); 
-    echo "Usted está registrado como ".$_SESSION["nombre"];
-    $array=array($_POST["nombre"],$_POST["correo"]);
+    $_SESSION["nombre"] = strtolower($_POST["nombre"]);
+    $name=$_SESSION["nombre"];
+       
+    $_SESSION["correo"] = strtolower($_POST["correo"]);
+    $email=$_SESSION["correo"];
+    echo "Usted está registrado como ".$_SESSION["nombre"].$name;
+    $array=array();
+    $array["$name"]=$email;
     //$_SESSION["completo"]=;
-    array_push($_SESSION["completo"],$array);
-    $complete=$_SESSION["completo"];
+    //array_push($_SESSION["completo"],$array);
+  //  $complete=$_SESSION["completo"];
+    $_SESSION["completo"]=array();
     ?>
     
     <form action="#" method="post">
@@ -32,12 +35,18 @@
              //   echo $name[i];
             echo $_SESSION["nombre"];
             echo "<br>";
-            echo $_SESSION["correo"];
+            echo $_SESSION["correo"]."<br>";
+            $_SESSION["completo"][$name]=$email;
+         //   array_push($_SESSION["completo"][$name],$email);
         //}
        // foreach($complete as $asdf){
-            print_r($_SESSION["completo"]);
+            //print_r($_SESSION["completo"]);
+          //  echo array_keys($_SESSION["completo"]);
+           // echo $_SESSION["completo"];
+            
         //}
     }
+    print_r($_SESSION["completo"]);
         ?>
 </form>
 </body>
