@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <title>Document</title>
 </head>
@@ -10,7 +10,8 @@
        
     $_SESSION["correo"] = strtolower($_POST["correo"]);
     $email=$_SESSION["correo"];
-    echo "Usted está registrado como ".$_SESSION["nombre"].$name;
+    $_SESSION["registro"]=$_POST["registro"];
+    echo "Usted está registrado como ".$_SESSION["registro"].$name;
     $array=array();
     $array["$name"]=$email;
     
