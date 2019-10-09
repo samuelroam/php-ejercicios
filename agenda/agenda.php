@@ -13,9 +13,7 @@
     echo "Usted está registrado como ".$_SESSION["nombre"].$name;
     $array=array();
     $array["$name"]=$email;
-    //$_SESSION["completo"]=;
-    //array_push($_SESSION["completo"],$array);
-  //  $complete=$_SESSION["completo"];
+    
     $_SESSION["completo"]=array();
     ?>
     
@@ -31,20 +29,12 @@
             if($_SESSION["nombre"]==""){
                 echo "<b>Por favor, introduzca un nombre</b>";
             };
-           // for($i=0;$i<=1;$i++){
-             //   echo $name[i];
+           
             echo $_SESSION["nombre"];
             echo "<br>";
             echo $_SESSION["correo"]."<br>";
             $_SESSION["completo"][$name]=$email;
-         //   array_push($_SESSION["completo"][$name],$email);
-        //}
-       // foreach($complete as $asdf){
-            //print_r($_SESSION["completo"]);
-          //  echo array_keys($_SESSION["completo"]);
-           // echo $_SESSION["completo"];
             
-        //}
     }
     print_r($_SESSION["completo"]);
         ?>
